@@ -1,0 +1,1440 @@
+[2020-10-31 16:12:58 -0400] [22907] [ERROR] Retrying in 1 second.
+[2020-10-31 16:12:59 -0400] [22907] [ERROR] Retrying in 1 second.
+[2020-10-31 16:13:00 -0400] [22907] [ERROR] Retrying in 1 second.
+[2020-10-31 16:13:01 -0400] [22907] [ERROR] Retrying in 1 second.
+[2020-10-31 16:13:02 -0400] [22907] [ERROR] Retrying in 1 second.
+[2020-10-31 16:13:03 -0400] [22907] [ERROR] Can't connect to ('localhost # if testing locally (before heroku deployment)', 22362)
+[2020-10-31 16:27:42 -0400] [23730] [ERROR] Retrying in 1 second.
+[2020-10-31 16:27:43 -0400] [23730] [ERROR] Retrying in 1 second.
+[2020-10-31 16:27:44 -0400] [23730] [ERROR] Retrying in 1 second.
+[2020-10-31 16:27:45 -0400] [23730] [ERROR] Retrying in 1 second.
+[2020-10-31 16:27:46 -0400] [23730] [ERROR] Retrying in 1 second.
+[2020-10-31 16:27:47 -0400] [23730] [ERROR] Can't connect to ('localhost # if testing locally (before heroku deployment)', 22362)
+2020-10-31 16:35:32,952 Exception on /exp [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/user_utils.py", line 23, in new_func
+    resp = make_response(func(*args, **kwargs))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 428, in start_exp
+    subj_cond, subj_counter = get_random_condcount(mode)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 151, in get_random_condcount
+    numconds = CONFIG.getint('Task Parameters', 'num_conds')
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/ConfigParser.py", line 359, in getint
+    return self._get(section, int, option)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/ConfigParser.py", line 356, in _get
+    return conv(self.get(section, option))
+ValueError: invalid literal for int() with base 10: '16 # This experiment has 4 between-subjects, followed by 4 within-subjects (hence 16)'
+[2020-10-31 16:36:03 -0400] [23835] [CRITICAL] WORKER TIMEOUT (pid:23838)
+2020-10-31 16:38:46,685 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+[2020-10-31 17:50:41 -0400] [23904] [CRITICAL] WORKER TIMEOUT (pid:23907)
+[2020-10-31 18:23:37 -0400] [23904] [CRITICAL] WORKER TIMEOUT (pid:27220)
+[2020-10-31 18:58:08 -0400] [23904] [CRITICAL] WORKER TIMEOUT (pid:27234)
+[2020-10-31 19:17:36 -0400] [23904] [CRITICAL] WORKER TIMEOUT (pid:27256)
+[2020-10-31 19:20:09 -0400] [23904] [CRITICAL] WORKER TIMEOUT (pid:27297)
+[2020-10-31 23:13:28 -0400] [23904] [CRITICAL] WORKER TIMEOUT (pid:27307)
+[2020-10-31 23:14:28 -0400] [23904] [CRITICAL] WORKER TIMEOUT (pid:28224)
+[2020-10-31 23:30:05 -0400] [23904] [CRITICAL] WORKER TIMEOUT (pid:28237)
+[2020-11-01 02:30:40 -0500] [23904] [CRITICAL] WORKER TIMEOUT (pid:28254)
+[2020-11-01 04:30:57 -0500] [23904] [CRITICAL] WORKER TIMEOUT (pid:28288)
+[2020-11-01 05:00:10 -0500] [23904] [CRITICAL] WORKER TIMEOUT (pid:28300)
+[2020-11-01 07:00:31 -0500] [23904] [CRITICAL] WORKER TIMEOUT (pid:28323)
+[2020-11-01 09:00:44 -0500] [23904] [CRITICAL] WORKER TIMEOUT (pid:28362)
+[2020-11-01 10:45:37 -0500] [23904] [CRITICAL] WORKER TIMEOUT (pid:28393)
+[2020-11-01 10:47:42 -0500] [23904] [CRITICAL] WORKER TIMEOUT (pid:28405)
+[2020-11-01 10:49:44 -0500] [23904] [CRITICAL] WORKER TIMEOUT (pid:28430)
+[2020-11-01 11:28:00 -0500] [23904] [CRITICAL] WORKER TIMEOUT (pid:28453)
+2020-11-01 12:51:04,180 Exception on /speech_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: speech_video.html
+2020-11-01 12:51:04,193 Exception on /motion_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: motion_video.html
+2020-11-01 12:51:04,208 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-01 13:04:02,155 Exception on /speech_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: speech_video.html
+2020-11-01 13:04:02,160 Exception on /motion_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: motion_video.html
+2020-11-01 13:04:02,170 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-01 13:05:17,472 Exception on /speech_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: speech_video.html
+2020-11-01 13:05:17,478 Exception on /motion_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: motion_video.html
+2020-11-01 13:05:17,491 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-01 13:11:28,355 Exception on /speech_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: speech_video.html
+2020-11-01 13:11:28,361 Exception on /motion_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: motion_video.html
+2020-11-01 13:11:28,371 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-01 13:13:20,694 Exception on /speech_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: speech_video.html
+2020-11-01 13:13:20,698 Exception on /motion_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: motion_video.html
+2020-11-01 13:13:20,708 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-01 13:15:39,612 Exception on /speech_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: speech_video.html
+2020-11-01 13:15:39,618 Exception on /motion_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: motion_video.html
+2020-11-01 13:15:39,627 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-01 13:26:37,427 Exception on /speech_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: speech_video.html
+2020-11-01 13:26:37,434 Exception on /motion_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: motion_video.html
+2020-11-01 13:26:37,445 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-01 13:36:05,350 Exception on /speech_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: speech_video.html
+2020-11-01 13:36:05,361 Exception on /motion_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: motion_video.html
+2020-11-01 13:36:05,373 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-01 13:44:54,150 Exception on /speech_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: speech_video.html
+2020-11-01 13:44:54,158 Exception on /motion_video.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: motion_video.html
+2020-11-01 13:44:54,170 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-01 13:48:08,927 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-01 14:03:36,996 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-01 14:07:30,403 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-01 14:13:13,141 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+[2020-11-01 14:23:08 -0500] [1189] [CRITICAL] WORKER TIMEOUT (pid:1192)
+[2020-11-01 15:13:01 -0500] [1189] [CRITICAL] WORKER TIMEOUT (pid:1235)
+[2020-11-01 16:06:29 -0500] [1189] [CRITICAL] WORKER TIMEOUT (pid:1377)
+[2020-11-01 18:06:43 -0500] [1189] [CRITICAL] WORKER TIMEOUT (pid:1401)
+[2020-11-01 20:06:56 -0500] [1189] [CRITICAL] WORKER TIMEOUT (pid:1412)
+[2020-11-01 21:55:13 -0500] [1189] [CRITICAL] WORKER TIMEOUT (pid:1424)
+[2020-11-01 23:30:54 -0500] [1189] [CRITICAL] WORKER TIMEOUT (pid:1435)
+[2020-11-02 01:31:26 -0500] [1189] [CRITICAL] WORKER TIMEOUT (pid:1454)
+[2020-11-02 03:31:39 -0500] [1189] [CRITICAL] WORKER TIMEOUT (pid:1480)
+[2020-11-02 03:45:05 -0500] [1189] [CRITICAL] WORKER TIMEOUT (pid:1490)
+[2020-11-02 07:00:05 -0500] [1189] [CRITICAL] WORKER TIMEOUT (pid:1506)
+[2020-11-02 07:00:06 -0500] [1555] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment_server.py", line 48, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 89, in <module>
+    init_db()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/db.py", line 37, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/sql/schema.py", line 4554, in create_all
+    ddl.SchemaGenerator, self, checkfirst=checkfirst, tables=tables
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2094, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2086, in _optional_conn_ctx_manager
+    with self._contextual_connect() as conn:
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2302, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2340, in _wrap_pool_connect
+    e, dialect, self
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+OperationalError: (psycopg2.OperationalError) could not translate host name "ec2-34-231-56-78.compute-1.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2020-11-07 10:23:49,502 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-07 10:27:37,066 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-07 10:29:27,428 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-07 10:41:08,156 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-07 10:52:23,349 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-07 10:57:38,186 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-07 10:59:30,578 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-07 11:09:02,899 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-07 11:12:17,197 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+2020-11-07 11:23:15,167 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
+[2020-11-07 19:45:10 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:19400)
+[2020-11-07 21:05:19 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:21738)
+[2020-11-07 21:26:28 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:21783)
+[2020-11-08 02:03:18 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:21801)
+[2020-11-08 02:40:49 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:23069)
+[2020-11-08 03:28:36 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:23091)
+[2020-11-09 04:04:37 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:23106)
+[2020-11-09 05:26:50 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:28456)
+[2020-11-09 06:32:59 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:28523)
+[2020-11-09 08:34:00 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:28537)
+[2020-11-09 10:35:01 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:28550)
+[2020-11-09 10:45:01 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:28567)
+[2020-11-09 13:03:29 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:28595)
+2020-11-09 13:05:44,278 Exception on /ad [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/user_utils.py", line 23, in new_func
+    resp = make_response(func(*args, **kwargs))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 291, in advertisement
+    filter(Participant.workerid == worker_id).\
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 3803, in count
+    return self.from_self(col).scalar()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 3523, in scalar
+    ret = self.one()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 3490, in one
+    ret = self.one_or_none()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 3459, in one_or_none
+    ret = list(self)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+DatabaseError: (psycopg2.DatabaseError) SSL SYSCALL error: Operation timed out
+
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT turkdemo.uniqueid AS turkdemo_uniqueid, turkdemo.assignmentid AS turkdemo_assignmentid, turkdemo.workerid AS turkdemo_workerid, turkdemo.hitid AS turkdemo_hitid, turkdemo.ipaddress AS turkdemo_ipaddress, turkdemo.browser AS turkdemo_browser, turkdemo.platform AS turkdemo_platform, turkdemo.language AS turkdemo_language, turkdemo.cond AS turkdemo_cond, turkdemo.counterbalance AS turkdemo_counterbalance, turkdemo.codeversion AS turkdemo_codeversion, turkdemo.beginhit AS turkdemo_beginhit, turkdemo.beginexp AS turkdemo_beginexp, turkdemo.endhit AS turkdemo_endhit, turkdemo.bonus AS turkdemo_bonus, turkdemo.status AS turkdemo_status, turkdemo.mode AS turkdemo_mode, turkdemo.datastring AS turkdemo_datastring 
+FROM turkdemo 
+WHERE turkdemo.assignmentid != %(assignmentid_1)s AND turkdemo.workerid = %(workerid_1)s) AS anon_1]
+[parameters: {'assignmentid_1': u'debugZ6FHPH', 'workerid_1': u'debugXN87B8'}]
+(Background on this error at: http://sqlalche.me/e/13/4xp6)
+[2020-11-09 13:14:36 -0700] [19397] [CRITICAL] WORKER TIMEOUT (pid:28784)
+2020-11-09 13:17:06,514 Exception on /final_question.html [GET]
+Traceback (most recent call last):
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/brennanoconnor/anaconda3/envs/psi/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: final_question.html
