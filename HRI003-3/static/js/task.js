@@ -472,7 +472,7 @@ var CommandVideo = function() {
 
     $("#next").click(function () {
         record_responses();
-        currentview = new ResponseVideo();
+        currentview = new SpeechQuestions();
     });
 };
 
@@ -538,13 +538,13 @@ var ResponseVideo = function() {
 
     $("#next").click(function () {
         record_responses();
-        currentview = new Questions();
+        currentview = new MotionQuestions();
     });
 };
 
 
 /**************
- * Questions  *
+ * Motion Questions  *
  **************/
 // This asks the user some questions about the videos they just watched.
 /*
@@ -553,15 +553,15 @@ stop and call the Check Question function, however in a within-subjects
 experiment we want to repeat the Command, Response, and Question functions as
 many times as elements in the square_conditions variable.
 */
-var Questions = function() {
+var MotionQuestions = function() {
 
     var error_message = "<h1>Oops!</h1><p>Something went wrong submitting your information. This might happen if you lose your internet connection. Press the button to resubmit.</p><button id='resubmit'>Resubmit</button>";
 
     // Nore that the phase is updated to reflect the new within-subjects assignment.
     record_responses = function() {
         psiTurk.recordTrialData({'phase':'questions_'+motion_vid, 'status':'submit'});
-        for(i=1; i<=15; i++){
-            psiTurk.recordUnstructuredData(question_label +"_"+i,$("input[name='"+i+"']").val());
+        for(i=1; i<=19; i++){
+            psiTurk.recordUnstructuredData('motion'+ question_label +"_"+i,$("input[name='"+i+"']").val());
         }
     };
 
@@ -611,21 +611,92 @@ var Questions = function() {
         This reflects a within-subjets approach. In a between subjects approach
         we would just move to a new CheckQuestion
         */
-        iter += 1;
-        if (iter >= 2){
-          currentview = new CheckQuestion();
-        }
-        else {
+        //iter += 1;
+        //if (iter >= 2){
+          //currentview = new CheckQuestion();
+        //}
           // Here we need to update the within-subjects variables before hopping
           // back in the experiment flow.
-          motion_vid = prefix + '/motion/' + video_conditions[myCondition][1];
-          question_label = video_conditions[myCondition][0] + video_conditions[myCondition][1];
-          currentview = new ResponseVideo();
-        }
+    motion_vid = prefix + '/motion/' + video_conditions[myCondition][1];
+    question_label = video_conditions[myCondition][0] + video_conditions[myCondition][1];
+    currentview = new CheckQuestion();
     });
 
 };
 
+/**************
+ * Speech Questions  *
+ **************/
+// This asks the user some questions about the videos they just watched.
+/*
+Note: In a traditional between-subjects experiment this is where we would
+stop and call the Check Question function, however in a within-subjects
+experiment we want to repeat the Command, Response, and Question functions as
+many times as elements in the square_conditions variable.
+*/
+var SpeechQuestions = function() {
+
+    var error_message = "<h1>Oops!</h1><p>Something went wrong submitting your information. This might happen if you lose your internet connection. Press the button to resubmit.</p><button id='resubmit'>Resubmit</button>";
+
+    // Nore that the phase is updated to reflect the new within-subjects assignment.
+    record_responses = function() {
+        psiTurk.recordTrialData({'phase':'questions_'+motion_vid, 'status':'submit'});
+        for(i=1; i<=19; i++){
+            psiTurk.recordUnstructuredData('speech' + question_label +"_"+i,$("input[name='"+i+"']").val());
+        }
+    };
+
+    prompt_resubmit = function() {
+	replaceBody(error_message);
+	$("#resubmit").click(resubmit);
+    };
+
+    resubmit = function() {
+	replaceBody("<h1>Trying to resubmit...</h1>");
+	reprompt = setTimeout(prompt_resubmit, 10000);
+
+	psiTurk.saveData({
+	    success: function() {
+		clearInterval(reprompt);
+
+	    },
+	    error: prompt_resubmit
+	});
+    };
+
+    // Load the questionnaire snippet
+    psiTurk.showPage('questions.html');
+    window.scrollTo(0, 0);
+    psiTurk.recordTrialData({'phase':'questions', 'status':'begin'});
+    //alert("mycondition... "+mycondition+ " = 0? "+(mycondition==0));
+
+    function checkenable(){
+        allclicked=true;
+        $(".not-clicked").each(function(i, val){
+            allclicked=false;
+        });
+        if(allclicked){
+        $('#next').removeAttr('disabled');
+        }
+    }
+
+    $(".not-clicked").click(function(e){
+        $(this).removeClass('not-clicked');
+        $(this).addClass('clicked');
+        checkenable();
+    });
+
+    $("#next").click(function () {
+        record_responses();
+        /*
+        This reflects a within-subjets approach. In a between subjects approach
+        we would just move to a new CheckQuestion
+        */
+        
+    currentview = new ResponseVideo();
+    });
+
+};
 
 /********************
  * Final Questions   *
